@@ -82,6 +82,7 @@
           this.x -= speed;
           d = dist(this.x, this.y, player.x, player.y);
           if (d < 90) {
+            noLoop();
             window.alert('You lose.');
             location.reload();
           }
@@ -132,6 +133,7 @@
           this.x -= speed2;
           dtwo = dist(this.x, this.y, player.x, player.y);
           if (dtwo < 90) {
+            noLoop();
             window.alert('You lose.');
             location.reload();
           }
