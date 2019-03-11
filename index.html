@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+    <style>
+      body {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+      }
+      #topbox {
+        background-color: black;
+        position: fixed;
+        width: 100vw;
+        height: 10vh;
+        color: white;
+        font-size: 9vh;
+      }
+      #dodge {
+        background-color: #9dd230;
+        border-width: 0;
+        width: 50vw;
+        height: 11vh;
+        color: white;
+        font-size: 9vh;
+        margin-top: 10vh;
+        float: left;
+      }
+      #dodgemulti {
+        background-color: #82ca95;
+        border-width: 0;
+        width: 50vw;
+        height: 11vh;
+        color: white;
+        font-size: 9vh;
+        margin-top: 10vh;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="topbox">Games made by Isaac:</div>
+    <button id="dodge" onclick="dodge()">Dodge</button>
+    <button id="dodgemulti" onclick="dodgemulti()">Dodge 2</button>
+    
+    <script>
+      function dodge() {
+        location.href="dodge.html";
+      }
+      function dodgemulti() {
+        location.href="dodgemulti.html";
+      }
+    </script>
+  </body>
+</html>
