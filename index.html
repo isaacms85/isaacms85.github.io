@@ -35,12 +35,23 @@
         margin-top: 10vh;
         float: right;
       }
+      #warning {
+        background-color: #1238f9;
+        border-width: 0;
+        width: 50vw;
+        height: 11vh;
+        color: white;
+        font-size: 9vh;
+        margin-top: 0vh;
+        float: left;
+      }
     </style>
   </head>
   <body>
     <div id="topbox">Games made by Isaac:</div>
     <button id="dodge" onclick="dodge()">Dodge</button>
     <button id="dodgemulti" onclick="dodgemulti()">Dodge 2</button>
+    <button id="warning" onclick="warning()">Warning Dodge</button>
     
     <script>
       function dodge() {
@@ -48,6 +59,9 @@
       }
       function dodgemulti() {
         location.href="dodgemulti.html";
+      }
+      function warning() {
+        location.href="warningdodge.html";
       }
     </script>
   </body>

@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+    <style>
+      body {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <script>
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+      var player = new player();
+      var meteor = new meteor();
+      var other = new other();
+      var d;
+      var dtwo;
+      var dthree;
+      var dfour;
+      var s = 0;
+      var speed = 85;
+      var speed2 = 80;
+      
+      
+      function setup() {
+        createCanvas(w,h);
+      }
+      
+      function draw() {
+        background(255);
+        player.show();
+        player.move();
+        meteor.show();
+        meteor.kill();
+        if (s > 9) {
+          other.show();
+          other.kill();
+        }
+        textSize(20);
+        fill(0);
+        text('Score: ' + s, 10,20);
+      }
+      
+      function player() {
+        this.x = 60;
+        this.y = h/2;
+        this.show = function() {
+          noStroke();
+          fill(62,89,254);
+          ellipse(this.x, this.y, 100,100);
+        };
+        this.move = function() {
+          if (keyIsDown(68) && (this.x < w-60)) { //right
+            this.x += 10;
+          }
+          if (keyIsDown(65) && (this.x > 60)) { //left
+            this.x -= 10;
+          }
+          if (keyIsDown(87) && (this.y > 60)) { //up
+            this.y -= 10;
+          }
+          if(keyIsDown(83) && (this.y < h-60)){ //down
+            this.y += 10;
+          }
+        };
+      }
+      
+      function meteor() {
+        this.x = w + 2000;
+        this.y = Math.floor(Math.random()*h*9/10);
+        this.show = function() {
+          noStroke();
+          fill(234, 218, 42);
+          ellipse(this.x, this.y, 100,100);
+        };
+        this.kill = function() {
+          this.x -= speed2;
+          d = dist(this.x,0,player.x,0);
+          dtwo = dist(0,this.y,0,player.y);
+          if ((d < 30) && (dtwo < 80)) {
+            noLoop();
+            window.alert('You lose.');
+            location.reload();
+          }
+          else if (this.x < 0) {
+            this.x = w + 2000;
+            this.y = Math.floor(Math.random()*h*9/10);
+            s++;
+          }
+          else if (this.x > w) {
+            noStroke();
+            textSize(100);
+            fill(255,0,0);
+            text('!' , w-30, this.y+50);
+          }
+        };
+      }
+      
+      function other() {
+        this.x = w + 2000;
+        this.y = Math.floor(Math.random()*h*9/10);
+        this.show = function() {
+          noStroke();
+          fill(66, 212, 249);
+          ellipse(this.x, this.y, 100,100);
+        };
+        this.kill = function() {
+          this.x -= speed;
+          dthree = dist(this.x,0,player.x,0);
+          dfour = dist(0,this.y,0,player.y);
+          if ((dthree < 25) && (dfour < 80)) {
+            noLoop();
+            window.alert('You lose.');
+            location.reload();
+          }
+          else if (this.x < 0) {
+            this.x = w + 2000;
+            this.y = Math.floor(Math.random()*h*9/10);
+            s++;
+          }
+          else if (this.x > w) {
+            noStroke();
+            textSize(100);
+            fill(255,0,0);
+            text('!' , w-30, this.y+50);
+          }
+        };
+      }
+    </script>
+  </body>
+</html>
