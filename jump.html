@@ -22,14 +22,15 @@
     var obstacle = new obstacle();
     var oof = new oof();
     var hit = false;
-    
+    var img;
 
       function setup() {
+        img = loadImage('polygonal-abstract-red-dark-background-eo-1366x768.jpg');
         createCanvas(w,h);
       }
       
       function draw() {
-        background(0);
+        background(img);
         text(w + " " + h, 10, 20)
         fill(148,62,15);
         rect(0,h-40,w,h);
