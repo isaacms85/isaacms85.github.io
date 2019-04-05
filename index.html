@@ -45,6 +45,16 @@
         margin-top: 0vh;
         float: left;
       }
+      #jump {
+        background-color: #09b5a9;
+        border-width: 0;
+        width: 50vw;
+        height: 11vh;
+        color: white;
+        font-size: 9vh;
+        margin-top: 0vh;
+        float: right;
+      }
     </style>
   </head>
   <body>
@@ -52,6 +62,7 @@
     <button id="dodge" onclick="dodge()">Dodge</button>
     <button id="dodgemulti" onclick="dodgemulti()">Dodge 2</button>
     <button id="warning" onclick="warning()">Warning Dodge</button>
+    <button id="jump" onclick="jump()">Jump</button>
     
     <script>
       function dodge() {
@@ -62,6 +73,9 @@
       }
       function warning() {
         location.href="warningdodge.html";
+      }
+      function jump() {
+        location.href="jump.html";
       }
     </script>
   </body>
