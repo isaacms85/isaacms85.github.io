@@ -25,9 +25,7 @@
             this.y = 0;
           }
           if (hit) {
-            window.alert('Oof');
             noLoop();
-            location.reload();
           }
         };
       }
