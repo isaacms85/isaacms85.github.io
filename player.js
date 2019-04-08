@@ -7,7 +7,7 @@
 
         this.show = function() {
           fill(255,0,0);
-          rect(this.x, this.y, 50, 50);
+          image(imgP , this.x, this.y, 50, 50);
         };
         
         this.up = function() {
