@@ -19,8 +19,8 @@
           this.y += this.velocity;
           this.velocity *= 0.8;
           if (this.y > h-140) {
-            this.y -= 5;
-            this.velocity = 0;
+            this.velocity -= 5;
+            this.y = h-145;
           }
           if (keyIsDown(37) && (this.x > 0)) {
             this.x -= 5;
