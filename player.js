@@ -28,7 +28,7 @@
           if (keyIsDown(39) && (this.x < w-25)) {
             this.x += 5;
           }
-          if ((keyIsDown(32)) && (this.y > h-155)) {
+          if ((keyIsDown(32)) && (this.y > h-165)) {
             this.up();
           }
         };
