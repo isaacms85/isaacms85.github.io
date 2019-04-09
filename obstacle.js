@@ -5,8 +5,7 @@
         this.velocity = 15; //Starting velocity of obstacle
         
         this.show = function() {
-          fill(255);
-          rect(this.x, this.y, 50, 100);
+            image(img, this.x, this.y, 50, 100);
           if (this.x < 0) {
             this.velocity += 1;
             this.x = w;
