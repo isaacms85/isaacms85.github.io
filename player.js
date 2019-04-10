@@ -1,6 +1,6 @@
       function player() {
         this.x = 100;
-        this.y = h-140;
+        this.y = h-90;
         this.gravity = 1; //The force of gravity
         this.lift = -50; //opposing the force of gravity
         this.velocity = 0; //Starting velocity of player
