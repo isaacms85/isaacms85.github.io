@@ -24,6 +24,7 @@
           }
           if (hit) {
             noLoop();
+            window.alert('test');
           }
         };
       }
