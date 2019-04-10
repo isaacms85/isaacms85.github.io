@@ -6,7 +6,7 @@
         this.velocity = 0; //Starting velocity of player
 
         this.show = function() {
-          image(imgP , this.x, this.y, 50, 100);
+          image(imgP , this.x, this.y, 75, 50);
         };
         
         this.up = function() {
@@ -18,9 +18,9 @@
           this.velocity += this.gravity; //Gravity applied when not jumping
           this.y += this.velocity;
           this.velocity *= 0.8;
-          if (this.y > h-140) {
+          if (this.y > h-90) {
             this.velocity -= 5;
-            this.y = h-145;
+            this.y = h-95;
           }
           if (keyIsDown(37) && (this.x > 0)) {
             this.x -= 5;
