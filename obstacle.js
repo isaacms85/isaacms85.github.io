@@ -5,7 +5,7 @@
         this.velocity = 15; //Starting velocity of obstacle
         
         this.show = function() {
-            image(img, this.x, this.y, 50, 100);
+            image(imgP, this.x, this.y, 50, 100);
           if (this.x < 0) {
             this.velocity += 1;
             this.x = w;
@@ -14,7 +14,7 @@
         };
         
         this.update = function() {
-          hit = collideRectRect(this.x+40, this.y, 50, 100, player.x, player.y, 75, 50);
+          hit = collideRectRect(this.x+40, this.y, 50, 100, player.x+65, player.y, 75, 50);
           this.x -= this.velocity;
           this.velocity *= 1;
           if (this.y > h) {
