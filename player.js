@@ -31,9 +31,6 @@
           if ((keyIsDown(32)) && (this.y > h-95)) {
             this.up();
           }
-          if (keyIsDown(82) {
-             location.reload();
-        }
         };
         
         this.left = function() {
