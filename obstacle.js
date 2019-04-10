@@ -24,7 +24,7 @@
           }
           if (hit) {
             noLoop();
-            window.alert('test');
+            window.alert('yeet');
           }
         };
       }
