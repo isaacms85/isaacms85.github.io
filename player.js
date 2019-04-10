@@ -6,7 +6,7 @@
         this.velocity = 0; //Starting velocity of player
 
         this.show = function() {
-          image(test , this.x, this.y, 75, 50);
+          image(imgP , this.x, this.y, 75, 50);
         };
         
         this.up = function() {
@@ -35,8 +35,8 @@
         
         this.left = function() {
           this.x -=5;
-        }
+        };
         this.right = function() {
           this.x += 5;
-        }
+        };
       }
