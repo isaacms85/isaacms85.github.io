@@ -2,7 +2,7 @@
         this.x = 100;
         this.y = h-90;
         this.gravity = 1; //The force of gravity
-        this.lift = -50; //opposing the force of gravity
+        this.lift = -20; //opposing the force of gravity
         this.velocity = 0; //Starting velocity of player
 
         this.show = function() {
@@ -28,7 +28,7 @@
           if (keyIsDown(39) && (this.x < w-25)) {
             this.x += 5;
           }
-          if ((keyIsDown(32)) && (this.y > h-165)) {
+          if ((keyIsDown(32)) && (this.y > h-95)) {
             this.up();
           }
         };
