@@ -2,11 +2,11 @@
         this.x = 100;
         this.y = h-90;
         this.gravity = 1; //The force of gravity
-        this.lift = -40; //opposing the force of gravity
+        this.lift = -50; //opposing the force of gravity
         this.velocity = 0; //Starting velocity of player
 
         this.show = function() {
-          image(img , this.x, this.y, 75, 50);
+          image(test , this.x, this.y, 75, 50);
         };
         
         this.up = function() {
