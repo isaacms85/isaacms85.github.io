@@ -18,8 +18,8 @@
           this.velocity += this.gravity; //Gravity applied when not jumping
           this.y += this.velocity;
           this.velocity *= 0.8;
-          if (this.y > h-80) {
-          this.y = h-80;
+          if (this.y > h-85) {
+          this.y = h-85;
           }
           if (keyIsDown(37) && (this.x > 0)) {
             this.x -= 5;
