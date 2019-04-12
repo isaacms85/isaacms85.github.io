@@ -24,7 +24,7 @@
           if (keyIsDown(37) && (this.x > 0)) {
             this.x -= 5;
           }
-          if (keyIsDown(39) && (this.x < w-25)) {
+          if (keyIsDown(39) && (this.x < w-50)) {
             this.x += 5;
           }
           if ((keyIsDown(32)) && (this.y > h-95)) {
