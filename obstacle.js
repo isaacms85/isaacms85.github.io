@@ -13,7 +13,7 @@
         };
         
         this.update = function() {
-          hit = collideRectRect(this.x, this.y, 53, 100, player.x, player.y, 80, 50);
+          hit = collideRectRect(this.x, this.y, 48, 100, player.x, player.y, 80, 50);
           this.x -= this.velocity;
           this.velocity *= 1;
           if (this.y > h) {
