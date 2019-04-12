@@ -9,10 +9,10 @@ var num = Math.floor(Math.random()*100) + 700;
             image(imgU, this.x, this.y, 58, 100);
             inside = collideRectRect(this.x, this.y, 58, 100, obstacle.x, obstacle.y, 58, 100);
           if ((this.x < 0) && (inside === false)) {
-            s++;
             num = Math.floor(Math.random()*100) + 700;
             this.x = w+num;
             this.y = h-140;
+            s++;
           }
         };
         
