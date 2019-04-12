@@ -4,6 +4,7 @@
     <script src="p5.collide2d.min.js"></script>
     <script src="player.js"></script>
     <script src="obstacle.js"></script>
+    <script src="oof.js"></script>
     <style>
       body {
         overflow: hidden;
@@ -19,13 +20,14 @@
     var h = window.innerHeight;
     var player = new player();
     var obstacle = new obstacle();
+    var oof = new oof();
     var hit = false;
+    var inside = false;
     var pic;
     var imgP;
     var imgO;
     var imgI;
     var imgU;
-
       function setup() {
         pic = loadImage('841032800_preview_Forest 7.png');
         imgP = loadImage('34e3be4ae06fbef.png');
@@ -36,7 +38,7 @@
       }
       
       function draw() {
-        background(pic);
+        background(255);
         text("Music from: Terraria", 10, 20);
         text("Space to jump, Arrow keys to move left and right work on sound, get the files from terraria wiki", 120, 20);
         imageMode(CORNER);
@@ -44,6 +46,8 @@
         player.update();
         obstacle.show();
         obstacle.update();
+        oof.show();
+        oof.update();
         imageMode(CORNERS);
         image(imgI, 0, h-40, w, h+40);
       }
