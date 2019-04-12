@@ -7,8 +7,6 @@ var num = Math.floor(Math.random()*100) + 700;
         
         this.show = function() {
             image(imgU, this.x, this.y, 58, 100);
-            fill(255);
-            rect(this.x, this.y, 58, 100);
             inside = collideRectRect(this.x, this.y, 58, 100, obstacle.x, obstacle.y, 58, 100);
           if ((this.x < 0) && (inside === false)) {
             num = Math.floor(Math.random()*100) + 700;
