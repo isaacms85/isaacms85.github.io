@@ -7,6 +7,7 @@
         this.show = function() {
             image(imgU, this.x, this.y, 58, 100);
           if (this.x < 0) {
+            s++;
             this.x = w+50;
             this.y = h-140;
           }
