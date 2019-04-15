@@ -2,7 +2,7 @@ var num = Math.floor(Math.random()*100) + 700;
       function oof() {
         this.x = w + num;
         this.y = h-140;
-        this.gravity = 0.5; //The force of gravity
+        this.gravity = 0.3; //The force of gravity
         this.velocity = 15; //Starting velocity of oof
         
         this.show = function() {
