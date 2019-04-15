@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+    <style>
+      body {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+      function setup() {
+        createCanvas(w,h);
+      }
+      
+      function draw() {
+        background(0);
+        fill(255);
+        textSize(80);
+        textAlign(CENTER);
+        text("Space to jump", w/2, 100);
+        text("Arrow keys to move left and right", w/2, 300);
+        text("Press 't' on your keyboard to advance", w/2, 500);
+      }
+      
+      function keyPressed() {
+        if (keyCode === 84) {
+          location.href = "jump.html";
+        }
+      }
+    </script>
+  </body>
+</html>
