@@ -1,7 +1,7 @@
       function obstacle() {
         this.x = w + 50;
         this.y = h-140;
-        this.gravity = 0.5; //The force of gravity
+        this.gravity = 0.3; //The force of gravity
         this.velocity = 15; //Starting velocity of obstacle
         
         this.show = function() {
