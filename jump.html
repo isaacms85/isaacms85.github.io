@@ -2,7 +2,6 @@
   <head>
     <script src="p5.min.js"></script>
     <script src="p5.collide2d.min.js"></script>
-    <script language="javascript" type="text/javascript" src="path/to/p5.sound.js"></script>
     <script src="player.js"></script>
     <script src="obstacle.js"></script>
     <script src="oof.js"></script>
@@ -30,7 +29,6 @@
     var imgO;
     var imgI;
     var imgU;
-    var mySound;
       
       function setup() {
         pic = loadImage('841032800_preview_Forest 7.png');
@@ -38,15 +36,11 @@
         imgO = loadImage('polygonal-abstract-red-dark-background-eo-1366x768.jpg');
         imgI = loadImage('Screenshot_57.png');
         imgU = loadImage('Screenshot_58.png');
-        soundFormats('mp3');
-        mySound = loadSound('Music-Overworld_Day.mp3');
         createCanvas(w,h);
       }
       
       function draw() {
         background(pic);
-        mySound.volume(0.1);
-        mySound.play();
         text("Score: " + s + " Music from the game Terraria", 10, 20);
         text(obstacle.x-oof.x, 300, 20);
         imageMode(CORNER);
