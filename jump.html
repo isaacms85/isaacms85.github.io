@@ -30,6 +30,7 @@
     var imgO;
     var imgI;
     var imgU;
+    var mySound;
       
       function setup() {
         pic = loadImage('841032800_preview_Forest 7.png');
@@ -44,7 +45,7 @@
       
       function draw() {
         background(pic);
-        text("Score: " + s + " Music from the game Terraria TEST", 10, 20);
+        text("Score: " + s + " Music from the game Terraria", 10, 20);
         text(obstacle.x-oof.x, 300, 20);
         imageMode(CORNER);
         player.show();
