@@ -45,6 +45,8 @@
       
       function draw() {
         background(pic);
+        mySound.volume(0.1);
+        mySound.play();
         text("Score: " + s + " Music from the game Terraria", 10, 20);
         text(obstacle.x-oof.x, 300, 20);
         imageMode(CORNER);
