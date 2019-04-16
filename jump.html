@@ -29,6 +29,7 @@
     var imgO;
     var imgI;
     var imgU;
+    var mySound;
       
       function setup() {
         pic = loadImage('841032800_preview_Forest 7.png');
@@ -36,11 +37,13 @@
         imgO = loadImage('polygonal-abstract-red-dark-background-eo-1366x768.jpg');
         imgI = loadImage('Screenshot_57.png');
         imgU = loadImage('Screenshot_58.png');
+        mySound = new sound('Music-Overworld_Day.mp3');
         createCanvas(w,h);
       }
       
       function draw() {
         background(pic);
+        mySound.play();
         text("Score: " + s + " Music from the game Terraria", 10, 20);
         text(obstacle.x-oof.x, 300, 20);
         imageMode(CORNER);
