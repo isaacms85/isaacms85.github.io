@@ -46,10 +46,8 @@ function mousePressed() {
   if (song.isPlaying()) {
     // .isPlaying() returns a boolean
     song.stop();
-    background(255, 0, 0);
   } else {
     song.play();
-    background(0, 255, 0);
   }
 }
 
@@ -57,7 +55,7 @@ function mousePressed() {
       function draw() {
         background(pic);
         textSize(30);
-        text("Score: " + s + " Music from the game Terraria", 10, 40);
+        text("Score: " + s + " Music from the game Terraria test", 10, 40);
         text(obstacle.x-oof.x, 550, 40);
         imageMode(CORNER);
         player.show();
