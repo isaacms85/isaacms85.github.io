@@ -2,6 +2,7 @@
   <head>
     <script src="p5.min.js"></script>
     <script src="p5.collide2d.min.js"></script>
+    <script src="p5.sound.min.js"></script>
     <script src="player.js"></script>
     <script src="obstacle.js"></script>
     <script src="oof.js"></script>
@@ -29,6 +30,12 @@
     var imgO;
     var imgI;
     var imgU;
+    var backsnd;
+      
+      function preload() {
+        soundFormats('mp3');
+        backsnd = loadSound('Music-Overworld_Day.mp3');
+      }
       
       function setup() {
         pic = loadImage('841032800_preview_Forest 7.png');
@@ -37,6 +44,8 @@
         imgI = loadImage('Screenshot_57.png');
         imgU = loadImage('Screenshot_58.png');
         createCanvas(w,h);
+        mySound.setVolume(0.1);
+        mySound.play();
       }
       
       function draw() {
