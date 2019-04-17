@@ -34,6 +34,7 @@
       
       function setup() {
         song = loadSound('Music-Overworld_Day.mp3');
+        song.setVolume(0.5);
         pic = loadImage('841032800_preview_Forest 7.png');
         imgP = loadImage('34e3be4ae06fbef.png');
         imgO = loadImage('polygonal-abstract-red-dark-background-eo-1366x768.jpg');
@@ -45,9 +46,9 @@
 function mousePressed() {
   if (song.isPlaying()) {
     // .isPlaying() returns a boolean
-    song.stop();
-  } else {
     song.play();
+  } else {
+    song.stop();
   }
 }
 
@@ -55,7 +56,7 @@ function mousePressed() {
       function draw() {
         background(pic);
         textSize(30);
-        text("Score: " + s + " Music from the game Terraria test", 10, 40);
+        text("Score: " + s + " Music from the game Terraria", 10, 40);
         text(obstacle.x-oof.x, 550, 40);
         imageMode(CORNER);
         player.show();
