@@ -46,12 +46,6 @@
       function draw() {
         function mousePressed() {
         background(pic);
-          if (song.isPlaying()) {
-            song.stop();
-          }
-          else {
-            song.play();
-          }
         textSize(30);
         text("Score: " + s + " Music from the game Terraria test", 10, 40);
         text(obstacle.x-oof.x, 550, 40);
