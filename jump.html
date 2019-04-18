@@ -63,7 +63,7 @@
         if (keyCode === 82) {
           location.reload();
         }
-        else if (keyCode === 32) {
+        else if ((keyCode === 32) && (song.isPlaying === false)) {
           song.play();
         }
       }
