@@ -44,7 +44,14 @@
       }
       
       function draw() {
+        function mousePressed() {
         background(pic);
+          if (song.isPlaying()) {
+            song.stop();
+          }
+          else {
+            song.play();
+          }
         textSize(30);
         text("Score: " + s + " Music from the game Terraria test", 10, 40);
         text(obstacle.x-oof.x, 550, 40);
@@ -57,14 +64,12 @@
         oof.update();
         imageMode(CORNERS);
         image(imgI, 0, h-40, w, h+40);
+        }
       }
       
       function keyPressed() {
         if (keyCode === 82) {
           location.reload();
-        }
-        else if ((keyCode === 32) && (song.isPlaying() === false)) {
-          song.play(); //pls
         }
       }
       
