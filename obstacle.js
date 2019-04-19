@@ -25,6 +25,7 @@
           }
           if (hit) {
             noLoop();
+            song.stop();
           }
         };
       }
