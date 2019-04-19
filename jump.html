@@ -30,16 +30,20 @@
     var imgO;
     var imgI;
     var imgU;
-    let song;
+    var song;
+      
+      function preload() {
+        song = loadSound('Music-Overworld_Day.mp3');
+      }
       
       function setup() {
-        song = loadSound('Music-Overworld_Day.mp3');
-        song.setVolume(0.5);
         pic = loadImage('841032800_preview_Forest 7.png');
         imgP = loadImage('34e3be4ae06fbef.png');
         imgO = loadImage('polygonal-abstract-red-dark-background-eo-1366x768.jpg');
         imgI = loadImage('Screenshot_57.png');
         imgU = loadImage('Screenshot_58.png');
+        song.setVolume(0.5);
+        song.play();
         createCanvas(w,h);
       }
       
