@@ -27,7 +27,6 @@
     var s = 0;
     var pic;
     var imgP;
-    var imgO;
     var imgI;
     var imgU;
     var song;
@@ -39,7 +38,6 @@
       function setup() {
         pic = loadImage('841032800_preview_Forest 7.png');
         imgP = loadImage('34e3be4ae06fbef.png');
-        imgO = loadImage('polygonal-abstract-red-dark-background-eo-1366x768.jpg');
         imgI = loadImage('Screenshot_57.png');
         imgU = loadImage('Screenshot_58.png');
         song.setVolume(0.1);
@@ -50,8 +48,7 @@
       function draw() {
         background(pic);
         textSize(30);
-        text("Score: " + s + " Music from the game Terraria test", 10, 40);
-        text(obstacle.x-oof.x, 550, 40);
+        text("Score: " + s + " Music from the game Terraria", 10, 40);
         imageMode(CORNER);
         player.show();
         player.update();
