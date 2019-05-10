@@ -21,21 +21,14 @@
           if (this.y > h-85) {
           this.y = h-85;
           }
-          if (keyIsDown(37) && (this.x > 0)) {
+          if ((keyIsDown(37) || (keyIsDown(65)) && (this.x > 0)) {
             this.x -= 5;
           }
-          if (keyIsDown(39) && (this.x < w-85)) {
+          if ((keyIsDown(3) || (keyIsDown(68)) && (this.x < w-85)) {
             this.x += 5;
           }
           if ((keyIsDown(32)) && (this.y > h-95)) {
             this.up();
           }
-        };
-        
-        this.left = function() {
-          this.x -=5;
-        };
-        this.right = function() {
-          this.x += 5;
         };
       }
