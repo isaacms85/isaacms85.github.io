@@ -30,5 +30,8 @@
           if (((keyIsDown(32)) || (keyIsDown(87))) && (this.y > h-95)) {
             this.up();
           }
+          function touchStarted() {
+            this.up();
+          }
         };
       }
