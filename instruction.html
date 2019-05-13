@@ -22,15 +22,19 @@
         fill(255);
         textSize(80);
         textAlign(CENTER);
-        text("Space to jump, 'r' to restart", w/2, 100);
+        text("Space/tap to jump, 'r' to restart", w/2, 100);
         text("Arrow keys to move left and right", w/2, 300);
-        text("Press 't' on your keyboard to advance", w/2, 500);
+        textSize(40);
+        text("Press 't' on your keyboard to advance or tap the screen", w/2, 500);
       }
       
       function keyPressed() {
         if (keyCode === 84) {
           location.href = "jump.html";
         }
+      }
+      function touchStarted() {
+        location.href = "jump.html";
       }
     </script>
   </body>
